@@ -14,7 +14,3 @@ def lambda_handler(event, context):
         dynamoTable.put_item(
             Item={'unique': str(uuid4()), 'Bucket': bucket_name, 'Object': object_key,'Size': size, 'Event': event_name, 'EventTime': event_time})
 
-import json
-import boto3
-from uuid import uuid4
-def lambda_handler(event, context):
